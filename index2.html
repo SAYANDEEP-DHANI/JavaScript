@@ -1,0 +1,20 @@
+<html>
+  <body>
+    <div>
+      <p>want to know me</p>
+      <p id="showMyName"></p>
+      <br />
+      <button id="btn">click here</button>
+    </div>
+    <script>
+      const MyName = document.querySelector("#ahowMyname");
+      const btn = document.querySelector("#btn");
+      const showMyName = () => {
+        setTimeout(() => {
+          showMyName.innerHTML = "Sayandeep Dhani";
+        }, 1000);
+      };
+      btn.addEventListener("click", showMyName);
+    </script>
+  </body>
+</html>

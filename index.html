@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>click the button to display a date</p>
+    <button onclick="myFunction()">try it</button>
+    <i>
+      <h1>
+        <p id="demo">Here you can see the update</p>
+      </h1>
+    </i>
+    <i>
+      <h1>
+        <p id="dem">Here you can see the update</p>
+      </h1>
+    </i>
+    <script>
+      function myFunction() {
+        d = new Date().toLocaleTimeString();
+        d1 = new Date().toLocaleDateString();
+        document.getElementById("demo").innerHTML = d;
+        document.getElementById("dem").innerHTML = d1;
+      }
+    </script>
+  </body>
+</html>

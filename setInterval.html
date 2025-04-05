@@ -1,0 +1,35 @@
+<html>
+  <body>
+    <div class="main-div">
+      <div>
+        <p>can you stop me when i reach at 5</p>
+        <br />
+        <button id="btn">click here</button>
+        <button id="btn1">stop</button>
+      </div>
+    </div>
+    <script>
+      const stopNum = document.querySelector("p");
+      const btn = document.querySelector("#btn");
+      const stopBtn = document.querySelector("#btn1"); // Changed to reference #btn1
+      let num = 0;
+      let interval;
+
+      const showMynum = () => {
+        stopNum.innerHTML = "Loading.....";
+        interval = setInterval(() => {
+          stopNum.innerHTML = `${num}`;
+          num++;
+        }, 1000);
+      };
+
+      btn.addEventListener("click", showMynum);
+
+      // Stop the interval when the "Stop" button is clicked
+      stopBtn.addEventListener("click", () => {
+        clearInterval(interval);
+        stopNum.innerHTML = "Stopped!";
+      });
+    </script>
+  </body>
+</html>
